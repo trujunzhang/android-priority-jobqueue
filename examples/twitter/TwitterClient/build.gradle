@@ -1,6 +1,4 @@
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.10'
-}
+
 
 
 buildscript {
@@ -9,7 +7,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.8.+'
+        classpath 'com.android.tools.build:gradle:1.2.3'
     }
 }
 
@@ -49,17 +47,17 @@ tasks.create(name: "runTwitter", type: RunApk){
 }
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "19.0.1"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 17
+        targetSdkVersion 22
     }
 
     dependencies {
         compile 'de.greenrobot:eventbus:2.1.0-beta-1'
         compile 'org.twitter4j:twitter4j-core:3.0.5'
-        compile 'com.path:android-priority-jobqueue:1.1-SNAPSHOT'
+        compile 'com.path:android-priority-jobqueue:1.1.2'
         compile files('external-libs/greenDAO.jar')
     }
 
